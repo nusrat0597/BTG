@@ -1,0 +1,176 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+		<link rel="stylesheet" type="text/css" href="signup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<?php 
+
+include 'dbcon.php';
+
+    if(isset($_POST['submit'])){
+
+        $username= mysqli_real_escape_string($con, $_POST['username']);
+        $email   = mysqli_real_escape_string($con, $_POST['email']);
+        $phone   = mysqli_real_escape_string($con, $_POST['phone']);
+        $password= mysqli_real_escape_string($con, $_POST['password']);
+        $cpassword=mysqli_real_escape_string($con,$_POST['cpassword']);
+
+        $pass= password_hash($password, PASSWORD_BCRYPT);
+        $cpass=password_hash($cpassword, PASSWORD_BCRYPT);
+
+        $emailquery = "select * from registration where email='$email'";
+        $query = mysqli_query ($con,$emailquery);
+
+        $emailcount= mysqli_num_rows($query);
+
+        if($emailcount >0){
+            ?>
+                
+            <script>
+                alert("Email Already Exists");
+                </script>
+                <?php
+        }
+        else{
+
+            if( $password === $cpassword){
+
+                $insertquery = "insert into registration (username,email,phone,password,cpassword) values('$username','$email','$phone','$pass','$cpass')";
+                
+                $iquery = mysqli_query ($con,$insertquery);
+
+                if($iquery){
+
+                    ?>
+                
+                    <script>
+                        alert("Insert Successfully");
+                        </script>
+                        <?php
+
+                     header('location:index.php');   
+                
+                }
+
+                else{
+
+                    ?>
+
+                       <script>
+                        alert("Not Inserted");
+                        </script>
+                        <?php
+
+                }
+            }
+            else{
+
+                ?>
+
+                <script>
+                 alert("Password not matching");
+                 </script>
+                 <?php
+            }
+              
+        }
+    }
+
+?>
+
+    <div class="reg">  
+    
+        <div class="full">
+        
+            <div class="form">
+                <div class="logo">
+                    <div class="logoimg"></div>
+        
+                    <p>Bangladesh Tourist Guide</p>
+                </div>
+        
+                <div class="wlc">
+                    Welcome 
+                </div>
+        
+                <div class="fb">
+                    <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook"></i>
+                      Sign up with Facebook
+                </a>
+                </div>
+        
+                <div class="google">
+                    <a href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2FAddMailService&followup=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2FAddMailService&passive=1209600&ifkv=AYZoVhetdBkpcaGR4fQsRg1u-jLsVblLPfrqgp2mH1cqVxP5_PxlP9gSYxdy4FbOEWWN5ITJ1MYGuw&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                        <i class="fa-brands fa-google"></i>
+                      Sign up with Google
+                </a>
+                </div>
+        
+                <div class="container">
+                    <p class="title">OR</p>
+                </div>
+                
+        
+                <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>"   >
+        
+                    <div class="signup">
+        
+                    <div class="u-box">
+                            <div class="u-logo"><i class="fa-solid fa-user"></i></div>
+                            <input name="username" class="u-text" placeholder="Full name" type="text" required>
+                        </div>
+        
+                      
+        
+                        <div class="e-box">
+                            <div class="e-logo"><i class="fa-solid fa-envelope"></i></div>
+                            <input name="email" class="e-text" placeholder="Email Address" type="email" required>
+                        </div>
+
+                        <div class="phn-box">
+                            <div class="phn-logo"><i class="fa-solid fa-phone"></i></div>
+                            <input name="phone" class="phn-text" placeholder="Phone number" type="text" required>
+                        </div>
+        
+                        
+        
+                        <div class="pass-box">
+                            <div class="pass-logo"><i class="fa-solid fa-lock"></i></div>
+                            <input name="password" class="pass-text" placeholder="Create Password" type="password" required>
+                        </div>
+
+                        <div class="cpass-box">
+                            <div class="cpass-logo"><i class="fa-solid fa-lock"></i></div>
+                            <input name="cpassword" class="cpass-text" placeholder="Repeat Password" type="password" required>
+                        </div>
+        
+        
+                        <div class="btn">
+        
+                            <button type="submit" name="submit" class="submit">Sign up</button>
+                        </div>
+        
+                        <div class="msg">
+                            <small>Already have an Account ?</small>
+                            <a href="signup.php">Login here </a>
+                        </div>
+        
+                     </div>
+                </div>
+                </form>
+         </div>
+        </div>
+     </div>  
+    </body>
+        </html>

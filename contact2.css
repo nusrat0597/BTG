@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    border: border-box;
+}
+
+.back{
+
+    height: 720px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+        background-image: url("image/robo.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+
+    
+   
+
+}
+
+
+
+.main{
+
+    height:400px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-content: center;
+     border-radius: 8px;
+     box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5);
+    
+    
+   
+}
+
+.box{
+
+    height:30%;
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+    margin-left: 25%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5);
+    
+}
+
+.shadow{
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    visibility:hidden;
+    
+}
+
+
+.opt1{
+background-image: url("image/robot2.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+
+}
+.opt1 a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.mail-logo{
+
+    height: 100%;
+    width:11%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+    color: whitesmoke;
+}
+
+.opt2{
+    background-image: url("image/gmail.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+
+}
+
+.opt2 a {
+
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 500;
+ 
+ }
+
+
+
+.opt3{
+
+background-image: url("image/phone2.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+}
+.phn-logo{
+
+    height: 100%;
+    width:10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+    color: whitesmoke;
+}
+
+ .opt3 a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+ }
+
+.box:hover .shadow{
+
+    visibility: visible;
+}
+
+ 

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-Your">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+		<link rel="stylesheet" type="text/css" href="dhaka.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpdYouryknf1YoNbCzqRKc4qyorYourgaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="dhaka">
+
+        <div class="name">
+            <h1>Dhaka</h1>
+            <h3>Dhaka is the capital and largest city of Bangladesh. With its colorful history and rich cultural traditions, Dhaka is known the world over as the city of mosques and muslin. Its fame attracted travelers from far and near throughout the ages. Today it has grown into a mega city of about Your.5 million people, with an area of about Your53 sq. km. becoming the hub of the nation's industrial, commercial, cultural, educational and political activities.</h3>
+        </div>
+
+
+         <div class="bar">
+
+            
+        	<div class="search-cty">
+                <p>Search Places<p>
+            </div>
+
+        <div class="search">
+
+            
+        <input type="text" id="search-bar" placeholder="Search your destination....." name="search-bar" onkeyup="hi()">
+
+                 <div class="autocom-box" id="autocom-box">
+                        <li><a href="x">Lalbagh Fort</a></li>
+                        <li><a href="x">Ahsan Manzil</a></li>
+                        <li><a href="x">National Memorial</a></li>
+                        <li><a href="x">Hatirjheel</a></li>
+                        <li><a href="x">Panam Nagar</a></li>
+                        <li><a href="x">Botanical Garden</a></li>
+                        <li><a href="x">National Zoo</a></li>
+                        <li><a href="x">Bangabandhu Sheikh Mujib Safari Park</a></li>
+                        <li><a href="x">National Museum</a></li>
+                        <li><a href="x">Bhawal National Park</a></li>
+                        <li><a href="x">Taj Mahal Bangladesh</a></li>
+                        <li><a href="x"> Novotheater</a></li>
+                        <li><a href="x">Suhrawardy Udyan </a></li>
+                        <li><a href="x"> Chandrima Udyan</a></li>
+                        <li><a href="x">Ramana Park </a></li>
+                        <li><a href="x">Bangladesh Air Force Museum </a></li>
+                        <li><a href="x">Mahera zamindar house </a></li>
+                        <li><a href="x">Jamuna Resort</a></li>
+                        <li><a href="x">Dhakeswari Temple</a></li>
+                        <li><a href="x">Zinda Park</a></li>
+                        <li><a href="x">Karzon Hall</a></li>
+                        <li><a href="x">Nandan Park</a></li>
+                        
+                       
+                 </div>
+    
+    <script >
+        const hi = ()  => {
+    
+            let filter = document.getElementById('search-bar').value.toUpperCase();
+    
+            let div = document.getElementById('autocom-box');
+    
+            let li = div. getElementsByTagName ('li');
+    
+            for (var i=0; i<li.length;  i++){
+    
+                let a = li[i].getElementsByTagName('a')[0];
+    
+                let textValue = a.textContent  || a.innerHTML;
+    
+                if( textValue.toUpperCase().indexOf(filter) > -1){
+    
+                    li[i].style.display ='';
+                }
+                else{
+                  
+                    li[i].style.display ='none';
+    
+                }
+    
+            }
+    
+        }
+    </script>
+               
+                <div class="icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+     </div>
+    </div>
+
+     
+    <div class="blank">
+        <p>Top Tourist Places</p>
+     </div>
+
+
+     <div class="city">
+
+
+        <div class="box1 box">
+            <div class="lalbag child" ></div>
+            <div class="h2a">
+            <a href="x"></a>
+            <h2>Lalbagh Fort</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+            
+         </div>
+
+
+        <div class="box2 box">
+            <div class="ahsan child">
+           </div>
+           <div class="h2a">
+            <h2>Ahsan Manzil</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+    
+    
+        <div class="box3 box">
+            <div class="sohid child"></div>
+            <div class="h2a">
+            <h2>National Memorial</h2>
+           <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+        <div class="box4 box">
+            <div class="hatirjheel child">
+           </div>
+           <div class="h2a">
+            <h2>Hatirjheel</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box5 box">
+            <div class="panam child"></div>
+            <div class="h2a">
+            <h2>Panam Nagar</h2>
+            <a href="x">Explore Your Tour</a>
+            </div>
+        </div>
+
+
+        <div class="box6 box">
+            <div class="botanical child"></div>
+            <div class="h2a">
+            <h2>Botanical Garden</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box7 box">
+            <div class="zoo child"></div>
+            <div class="h2a">
+            <h2>National Zoo</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box8 box">
+            <div class="safari child"></div>
+            <div class="h2a">
+            <h2>Bangabandhu Sheikh Mujib Safari Park</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+        
+        <div class="box9 box">
+            <div class="meseum child"></div>
+            <div class="h2a">
+            <h2>National Museum</h2>
+            <a href="x">eXPLORE </a>
+    </div>
+        </div>
+
+
+        <div class="box10 box">
+            <div class="bhawal child"></div>
+            <div class="h2a">
+            <h2>Bhawal National Park</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box11 box">
+            <div class="taj child"></div>
+            <div class="h2a">
+            <h2>Taj Mahal Bangladesh</h2>
+           <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box12 box">
+            <div class="nobo child"></div>
+            <div class="h2a">
+            <h2>Novotheater</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box13 box">
+            <div class="suhrawardy child"></div>
+            <div class="h2a">
+            <h2>Suhrawardy Udyan</h2>
+            <a href="x">Explore Your Tour</a>
+    </div>
+        </div>
+
+
+        <div class="box14 box">
+            <div class="chandrima child"></div>
+            <div class="h2a">
+            <h2>Chandrima Udyan</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box15 box">
+            <div class="ramna child"></div>
+            <div class="h2a">
+            <h2>Ramana Park </h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box16 box">
+            <div class="air child"></div>
+            <div class="h2a">
+            <h2>Bangladesh Air Force Museum</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+        
+        <div class="box17 box">
+            <div class="mahera child"></div>
+            <div class="h2a">
+            <h2>Mahera zamindar house</h2>
+            <a href="x">Explore Your Tour</a>
+    </div>
+        </div>
+
+
+        <div class="box18 box">
+            <div class="jamuna child"></div>
+            <div class="h2a">
+            <h2>Jamuna Resort</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box19 box">
+            <div class="dhakeswari child"></div>
+            <div class="h2a">
+            <h2>Dhakeswari Temple</h2>
+           <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box20 box">
+            <div class="zinda child"></div>
+            <div class="h2a">
+            <h2>Zinda Park</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box21 box">
+            <div class="karzon child"></div>
+            <div class="h2a">
+            <h2>Karzon Hall</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+
+
+        <div class="box22 box">
+            <div class="nandan child"></div>
+            <div class="h2a">
+            <h2>Nandan Park</h2>
+            <a href="x">Explore Your Tour</a>
+        </div>
+        </div>
+     </div>
+
+
+</body>
+</html>
